@@ -1,5 +1,7 @@
-package Juego_Buscaminas;
+package Juego_Buscaminas.vista;
 import java.util.Scanner;
+
+import Juego_Buscaminas.controlador.Tablero;
 
 public class Juego {
     private Tablero tablero;
@@ -7,17 +9,27 @@ public class Juego {
 
 
     public void iniciar(){
+    	//Inicializa el trablero con un numero de filas, columnas y cantidad de minas.  
         tablero = new Tablero(10,10,10);
         juego_Terminado = false; 
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("============Bienvenido al Buscaminas===========");
+        System.out.println("\n============Bienvenido al Buscaminas===========");
         while (!juego_Terminado) {
             tablero.Most_Tablero();
-            System.out.println("Ingrese accicion y coordenadas (Ej: descubrir E5)");
+            System.out.println("Ingrese accion y coordenadas (Ej: descubrir E5)");
             String entrada = scanner.nextLine();
             String[] partes =  entrada.split(" ");
+            for (String parte : partes) {
+                System.out.println(parte);
+                
+            }
+            System.out.println(partes.length);
             if (partes.length != 2) {
+            	
+            	for (String parte : partes) {
+                    System.out.println(parte);
+                }
                 System.out.println("Entrada Invalida. Usa el formato 'acción coordenada' (Ejemplo: descubrir A5)");
                 continue;
             }

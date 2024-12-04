@@ -1,4 +1,4 @@
-package Juego_Buscaminas;
+package Juego_Buscaminas.modelo;
 
 public class Casilla {
     private boolean mina;
