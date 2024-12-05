@@ -2,9 +2,10 @@ package Juego_Buscaminas.vista;
 
 import java.util.Scanner;
 
+import Juego_Buscaminas.controlador.IJuego;
 import Juego_Buscaminas.controlador.Tablero;
 
-public class Juego {
+public class Juego implements IJuego{
 	private Tablero tablero;
 	private boolean juego_Terminado;
 
@@ -20,12 +21,8 @@ public class Juego {
 			System.out.println("Ingrese accion y coordenadas (Ej: descubrir E5)");
 			String entrada = scanner.nextLine();
 			String[] partes = entrada.split(" ");
-			for (String parte : partes) {
-				System.out.println(parte);
-			}
 
 			// Validacion que el usuario haya ingresado los dos valors solicitados.
-			System.out.println(partes.length);
 			if (partes.length != 2) {
 				System.out.println("Entrada Invalida. Usa el formato 'acción coordenada' (Ejemplo: descubrir A5)");
 				continue;
@@ -51,7 +48,6 @@ public class Juego {
 			}
 
 			String acionARealizar = accion.toLowerCase();
-			System.out.println("acionARealizar "+ acionARealizar);
 			if (acionARealizar.equals("descubrir")) {
 				if (tablero.descubrir_Casilla(fila, column)) {
 					System.out.println("Has pisado una mina. fin del juego");
