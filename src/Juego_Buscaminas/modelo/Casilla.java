@@ -1,6 +1,9 @@
 package Juego_Buscaminas.modelo;
 
 public class Casilla {
+	
+	private static final long serialVersionUID = 1L; // Necesario para la serialización
+	
     private boolean mina;
     private boolean descubierta;
     private boolean marcada;

@@ -5,6 +5,8 @@ import java.util.Random;
 import Juego_Buscaminas.modelo.Casilla;
 
 public class Tablero {
+	 private static final long serialVersionUID = 1L;
+	
 	private final Casilla[][] casillas;
 	private final int filas;
 	private final int columnas;
