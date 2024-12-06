@@ -15,7 +15,11 @@ public class Juego implements IJuego{
 		juego_Terminado = false;
 		Scanner scanner = new Scanner(System.in);
 
+		
 		System.out.println("\n============Bienvenido al Buscaminas===========");
+		System.out.println("INSTRUCCIONES");
+		System.out.println("Para dar instrucciones en que casilla ubicarse se de beber colocar la palabra: 'descubrir' y las cordenas");
+		System.out.println("Para marcar una casilla colocar la palabra marcar seguido de la cordenada");
 		while (!juego_Terminado) {
 			tablero.Most_Tablero();
 			System.out.println("Ingrese accion y coordenadas (Ej: descubrir E5)");
