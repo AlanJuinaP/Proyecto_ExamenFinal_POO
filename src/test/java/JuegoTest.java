@@ -1,7 +1,9 @@
 package test.java;
 
-import Juego_Buscaminas.Tablero;
 import org.junit.jupiter.api.Test;
+
+import Juego_Buscaminas.controlador.Tablero;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class JuegoTest {
